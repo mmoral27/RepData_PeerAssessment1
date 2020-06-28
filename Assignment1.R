@@ -34,7 +34,7 @@ max_steps
 #Third question
 
 number_na <- which(is.na(data) == TRUE)
-length(number_na)
+len <- length(number_na)
 
 mean_interval <- tapply(new_data$steps, new_data$interval, mean, na.rm=TRUE)
 
@@ -71,7 +71,6 @@ new_data$week <- as.factor(new_data$week)
 
 weekType_avg <- aggregate(steps ~ interval + week, data = new_data, mean)
 
-library(ggplot2)
 
 g2 <- ggplot(weekType_avg, aes(interval, steps, color = week)) + 
         geom_line(size = 1.5) + 
