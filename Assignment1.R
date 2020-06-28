@@ -28,8 +28,8 @@ max <- max(avg_interval$steps)
 max
 
 row_max <- which(avg_interval$steps == max)
-avg_interval[row_max,1]
-
+max_steps <- avg_interval[row_max,1]
+max_steps
 
 #Third question
 
